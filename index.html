@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NT JILI</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #101010;
+  color: white;
+}
+
+header {
+  background: #1d1d1d;
+  color: #ffd700;
+  padding: 20px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.balance {
+  margin: 16px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #252525;
+  text-align: center;
+}
+
+.balance h2 {
+  color: #ffd700;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.deposit {
+  background: #ffd700;
+}
+
+.withdraw {
+  background: #28a745;
+  color: white;
+}
+
+.games {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding: 16px;
+}
+
+.game {
+  background: #252525;
+  border-radius: 12px;
+  padding: 24px 10px;
+  text-align: center;
+  border: 1px solid #444;
+}
+
+.game button {
+  background: #ffd700;
+  margin-top: 10px;
+}
+
+.notice {
+  padding: 16px;
+  color: #ccc;
+  text-align: center;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>👑 NT JILI</header>
+
+<section class="balance">
+  <p>Virtual Coin Balance</p>
+  <h2 id="coins">1000 Coins</h2>
+
+  <div class="buttons">
+    <button class="deposit" onclick="showMessage()">
+      Deposit
+    </button>
+
+    <button class="withdraw" onclick="showMessage()">
+      Rewards
+    </button>
+  </div>
+</section>
+
+<h2 style="text-align:center">🎮 Choose Your Game</h2>
+
+<section class="games">
+  <div class="game">
+    <h3>🃏 Teen Patti</h3>
+    <p>Play with virtual coins</p>
+    <button onclick="playGame('Teen Patti')">
+      Play Now
+    </button>
+  </div>
+
+  <div class="game">
+    <h3>🎴 Rummy</h3>
+    <p>Play with virtual coins</p>
+    <button onclick="playGame('Rummy')">
+      Play Now
+    </button>
+  </div>
+</section>
+
+<section class="balance">
+  <h3>🎁 Daily Rewards</h3>
+  <p>Login daily to collect virtual rewards.</p>
+  <button class="deposit" onclick="dailyReward()">
+    Collect Reward
+  </button>
+</section>
+
+<section class="balance">
+  <h3>👥 Refer a Friend</h3>
+  <p>Invite friends to explore NT JILI.</p>
+  <button class="deposit" onclick="referFriend()">
+    Refer Now
+  </button>
+</section>
+
+<p class="notice">
+  Demo version. Virtual coins only. No real-money deposits
+  or withdrawals are processed.
+</p>
+
+<script>
+function showMessage() {
+  alert("This is a demo. Real-money transactions are not enabled.");
+}
+
+function playGame(name) {
+  alert(name + " game will be added in the next version!");
+}
+
+function dailyReward() {
+  alert("Daily reward demo! A secure login system is needed to track rewards.");
+}
+
+function referFriend() {
+  alert("Referral system will be added in the next version!");
+}
+</script>
+
+</body>
+</html>
