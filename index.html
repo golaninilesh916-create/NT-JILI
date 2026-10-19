@@ -170,3 +170,123 @@ function referFriend() {
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NT JILI Teen Patti</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #101010;
+  color: white;
+  text-align: center;
+}
+header {
+  background: #222;
+  color: gold;
+  padding: 22px;
+  font-size: 28px;
+  font-weight: bold;
+}
+h2 { color: gold; }
+.table {
+  margin: 20px auto;
+  padding: 25px 10px;
+  max-width: 360px;
+  background: #075b36;
+  border: 5px solid gold;
+  border-radius: 30px;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 25px 0;
+}
+.card {
+  width: 75px;
+  height: 110px;
+  border-radius: 10px;
+  background: white;
+  color: #b00020;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+  box-shadow: 0 3px 8px #222;
+}
+button {
+  padding: 13px 22px;
+  margin: 7px;
+  border: 0;
+  border-radius: 8px;
+  background: gold;
+  color: #111;
+  font-weight: bold;
+  font-size: 16px;
+}
+#message { min-height: 24px; }
+.note { color: #ccc; font-size: 13px; padding: 15px; }
+</style>
+</head>
+<body>
+
+<header>👑 NT JILI</header>
+
+<h2>🃏 Teen Patti</h2>
+<p>Virtual Coins: <b id="coins">1000</b> 🪙</p>
+
+<div class="table">
+  <p>તમારા ત્રણ કાર્ડ</p>
+  <div class="cards">
+    <div class="card" id="c1">?</div>
+    <div class="card" id="c2">?</div>
+    <div class="card" id="c3">?</div>
+  </div>
+  <button onclick="deal()">🎴 કાર્ડ ખોલો</button>
+  <button onclick="resetGame()">🔄 ફરી રમો</button>
+  <p id="message">રમવા માટે કાર્ડ ખોલો!</p>
+</div>
+
+<p class="note">
+આ ફ્રી ડેમો છે. કોઈ વાસ્તવિક પૈસા કે બેટિંગ નથી.
+</p>
+
+<script>
+const deck = [
+ "A♠","K♠","Q♠","J♠","10♠","9♠",
+ "A♥","K♥","Q♥","J♥","10♥","9♥",
+ "A♦","K♦","Q♦","J♦","10♦","9♦",
+ "A♣","K♣","Q♣","J♣","10♣","9♣"
+];
+
+let coins = 1000;
+
+function deal() {
+  const cards = [...deck].sort(() => Math.random() - 0.5).slice(0, 3);
+  ["c1","c2","c3"].forEach((id, i) => {
+    document.getElementById(id).textContent = cards[i];
+    document.getElementById(id).style.color =
+      cards[i].includes("♥") || cards[i].includes("♦")
+      ? "#b00020" : "#111";
+  });
+  document.getElementById("message").textContent =
+    "તમારા કાર્ડ ખુલ્યા! ફરી રમવા માટે બટન દબાવો.";
+}
+
+function resetGame() {
+  ["c1","c2","c3"].forEach(id => {
+    document.getElementById(id).textContent = "?";
+    document.getElementById(id).style.color = "#b00020";
+  });
+  document.getElementById("message").textContent =
+    "રમવા માટે કાર્ડ ખોલો!";
+}
+</script>
+
+</body>
+</html>
